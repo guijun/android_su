@@ -1,8 +1,10 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
+APP_ABI             := armeabi
+LOCAL_CFLAGS += -pie -fPIE
+LOCAL_LDFLAGS += -pie -fPIE
 
 LOCAL_SRC_FILES:= su.c
-
 LOCAL_MODULE:= su
 
 LOCAL_STATIC_LIBRARIES := libc
